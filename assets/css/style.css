@@ -1,0 +1,106 @@
+		@import url('https://rsms.me/inter/inter.css');
+		html { font-family: 'Inter', sans-serif; }
+		@supports (font-variation-settings: normal) {
+		  html { font-family: 'Inter var', sans-serif; }
+		}
+		body{
+			margin: 0;
+			background: var(--p-suggested-bg);
+			color: var(--p-suggested-color);
+		}
+		/* HEADS UP! Everything uses _ft if it's a custom component */
+		.cta_ft{
+			min-height: 100vh;
+			align-items: center;
+			padding: 0;
+			margin: 0;
+		}
+
+		.cta_ft>div{
+			margin: 0;
+			padding: 0;
+		}
+
+		.cta_img_ft{
+			height: 100vh;
+			display: block;
+			margin: auto;
+			max-width: 100%;
+			object-fit: cover;
+    		clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+		}
+
+		.alternate_clip_path{
+			clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+		}
+
+		.pd-l-10{
+			padding-left: 10%;
+		}
+
+		.pd-r-10{
+			padding-right: 10%;
+		}
+
+		.no_mt{
+			margin-top: 0;
+		}
+
+		.no_mb{
+			margin-bottom: 0;
+		}
+		section:not(.cta_ft){
+			margin-top: 100px;
+		}
+
+		.p-card{
+			margin-top: 50px;
+			margin-bottom: 20px;
+			transition: .3s ease;
+		}
+
+		.p-card:hover{
+			transform: scale(1.05);
+		}
+
+		.card_product_ft{
+			--bg: url('https://images.unsplash.com/photo-1522071901873-411886a10004?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+			background: var(--bg), rgba(0,0,0,.6);
+			background-size: cover;
+			background-blend-mode: overlay;
+		}
+
+		.evenly-xs{
+			justify-content: space-evenly;
+		}
+
+		.cta_ft_product{
+			--bg:url('https://images.unsplash.com/photo-1571265741625-917e6b6ea1e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2068&q=80');
+			background:var(--bg), rgba(0,0,0,.5);
+			background-blend-mode: overlay;
+			background-size: cover;
+
+		}
+
+		.img_default{
+			display: block;
+			margin: auto;
+			max-width: 100%;
+		}
+
+		.bd_5{
+			border-radius: 5px;
+		}
+
+		@media (max-width: 768px){
+			.cta_img_ft,.alternate_clip_path{
+				height: 50vh;
+				clip-path: polygon(0 0, 0% 100%, 100% 0);
+			}
+			.cta_ft{
+				align-items: unset;
+			}
+			.pd-l-10,.pd-r-10{
+				padding: 0;
+			}
+		}
